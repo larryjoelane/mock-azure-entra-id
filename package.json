@@ -1,0 +1,31 @@
+{
+  "name": "mock-azure-entra-id",
+  "version": "0.1.0",
+  "description": "Mock Azure Entra ID identity provider for MSAL.js SPA testing",
+  "main": "dist/server.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc -p tsconfig.json",
+    "start": "node dist/server.js",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "react-example": "concurrently \"npx tsx watch src/server.ts\" \"cd react-app-example && npm run dev\""
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "dependencies": {
+    "@fastify/cors": "^11.1.0",
+    "@fastify/formbody": "^8.0.0",
+    "fastify": "^5.6.0",
+    "jose": "^6.1.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "concurrently": "^9.2.1",
+    "tsx": "^4.20.0",
+    "typescript": "^5.5.0",
+    "vitest": "^2.0.0"
+  }
+}
